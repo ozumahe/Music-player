@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 1rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images/comethru.jpeg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 1);
+}
+.wrapper {
+  padding: 1em;
+}
+.cover {
+  background-color: wheat;
+  text-align: center;
+  padding: 1rem;
+}
+.cover img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: img 3s infinite linear;
+  animation-play-state: paused; /*To pause the Rotating Img On The Defalut Sate*/
+}
+
+/* To rotate the Img When Music Is Playing (When Active ClassList Is Added To The Container Class Name) */
+.container.active .cover img {
+  animation-play-state: running;
+}
+.music-info {
+  text-align: center;
+  background-color: tomato;
+  padding: 1rem;
+}
+.music-info h4 {
+  color: white;
+  margin: 0;
+  font-weight: 500;
+}
+.artist {
+  margin: 0;
+  padding: 0;
+  color: #f9f9f9;
+  font-size: 13px;
+}
+.progress-container {
+  height: 5px;
+  width: 290px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px auto;
+  text-align: center;
+  cursor: pointer;
+}
+.progress-container .progress {
+  height: 100%;
+  width: 0;
+  background: black;
+  position: relative;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  background: black;
+  position: absolute;
+  border-radius: 50%;
+  right: 0;
+  top: -4px;
+}
+.activeBtn {
+  background: none;
+  color: #f9f9f9;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.active-Big {
+  font-size: 18px;
+  background-color: #f9f9f9;
+  color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+/* Animation Key Frames */
+/* Rotaing Img */
+@keyframes img {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Queries */
+@media (min-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .music-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

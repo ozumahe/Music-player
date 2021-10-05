@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <!-- Music Cover Img -->
+            <div class="cover">
+                <img id="img" src="images/comethru.jpeg" alt="">
+            </div>
+            <!-- End Of Music Img -->
+            <div class="music-info">
+                <div>
+                    <h4 id="title" class="title">music</h4>
+                    <p id="artist"  class="artist">Artist</p>
+                </div>
+                <!-- Progress Length Container -->
+                <div id="progress-container" class="progress-container">
+                    <!-- Progress -->
+                    <div id="progress" class="progress"><span class="dot"></span></div>
+                    <!--End Of Progress -->
+
+                </div>
+                <!-- End Progress Length Container -->
+
+                <!-- Button -->
+                <div class="btn">
+                    <button class="activeBtn" id="prev-btn">
+                        <i class="fas fa-backward"></i>
+                    </button>
+                    <button class="activeBtn active-Big" id="play-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="activeBtn" id="next-btn">
+                        <i class="fas fa-forward"></i>
+                    </button>
+                </div>
+                <!-- End Of Button -->
+            </div>
+            
+        </div>
+    <!-- Song -->
+    <audio id="audio" src="music/comethru.mp3"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
